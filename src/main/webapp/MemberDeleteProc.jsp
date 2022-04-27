@@ -1,7 +1,6 @@
 <%@page import="model.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <body>
@@ -25,7 +24,6 @@
 		mdao.deleteMember(mbean.getId());
 		response.sendRedirect("SessionMain.jsp");
 		
-			
 	}else{
 %>
 	<script type="text/javascript">

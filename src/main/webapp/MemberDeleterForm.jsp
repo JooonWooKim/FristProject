@@ -19,12 +19,12 @@
 		
 		<tr height="50">
 			<td align="center" width="150">비밀번호</td>
-			<td width="250"><input type="password" name="password"></td>
+			<td width="250"><input type="password" name="password1"></td>
 		</tr>
 		<tr height="50">
 			<td align="center" colspan="2">
 			<input type="hidden" name="id" value="<%=request.getParameter("id")%>">
-			<input type="submit" value="회원 삭제하기"> &nbsp;&nbsp;</form>
+			<input type="submit" value="회원 수정하기"> &nbsp;&nbsp;</form>
 			<button onclick="location.href='MemberList.jsp'"> 회원 전체 보기</button>
 			</td>
 		</tr>

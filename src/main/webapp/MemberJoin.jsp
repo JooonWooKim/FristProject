@@ -13,32 +13,48 @@
 <title>MemberJoin</title>
 </head>
 <body>
-<script>
+<script type="text/javascript">
 
-	var id = document.forms[0].id.value;
-	var password1 = document.forms[0].password1.value;
-	var password2 = document.forms[0].password2.value;
-	var name = document.forms[0].name.value;
-	var email = document.forms[0].email.value;
+	var id = document.getElementByID("id");
+	var password1 = document.getElementByID("password1");
+	var password2 = document.getElementByID("password2");
+	var name = document.getElementByID("name");
+	var email = document.getElementByID("email");
 	var phone = document.forms[0].phone.value;
 
 	function formCheck(){
-		if(id == null || id == ""){
-			alert('id를 입력하세요.');
-			document.forms[0].id.focus();
+		if(id == ""){
+			alert("아이디를 입력하세요.");
+			id.focus();
 			return false;
 		}
 		
-		if(password1 == null || password1 == ""){
-			alert('password를 입력하세요.');
-			document.forms[0].password1.focus();
+		if(password1 == ""){
+			alert("비밀번호를 입력하세요.");
+			password1.focus();
 			return false;
 		}
 		if(password2 == password1){
-			alert('password가 틀립니다.');
-			document.forms[0].passwrod2.focus();
+			alert("패스워드가 틀립니다.");
+			password2.focus();
 			return false;
 		}
+		if(name == ""){
+			alert("이름을 입력하세요.");
+			name.focus();
+			return false;
+		}
+		if(email == ""){
+			alert("이메일을 입력하세요.");
+			email.focus();
+			return false;
+		}
+		if(phone == ""){
+			alert("전화번호를 입력하세요.");
+			phone.focus();
+			return false;
+		}
+		return true;
 }
 </script>
 	<center>

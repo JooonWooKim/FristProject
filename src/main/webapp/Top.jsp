@@ -37,19 +37,23 @@
 			<%
 				if(id.equals("손님")){
 			%>
-				<%=id %> 님 <button onclick="location.href='SessionMain.jsp?center=MemberLogin.jsp'">로그인</button>
+				<%=id %> 님 
+				<button onclick="location.href='SessionMain.jsp?center=MemberLogin.jsp'">로그인</button>
+				<li><a href="SessionMain.jsp?center=MemberJoin.jsp">Account</a></li>
 			
 			<%	}else{ %>
-				<%=id %> 님 <button onclick="location.href='SessionMain.jsp?logout=1'">Logout</button>
+				<%=id %> 님 
+				<button onclick="location.href='SessionMain.jsp?logout=1'">Logout</button>
+				<li><a href="SessionMain.jsp?center=MemberList.jsp">Account</a></li>
 			<% } %>
 			
-				<li><a href="SessionMain.jsp?center=MemberJoin.jsp">Account</a></li>
+				
 				<li><a href="SessionMain.jsp?center=BoardList.jsp">Notify</a></li>
 			<%
 				if(id != null && id.equals("admin")){
-					%>
+			%>
 					<input type="button" value="회원전체관리(관리자용)" onclick="location.href='SessionMain.jsp?center=AdminCenter.jsp'">
-				<%
+			<%
 				}
 			%>
 			</ul>
